@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2ec63f7-b596-476d-b01b-821179b69ac7" name="Default Changelist" comment="第一次提交">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <list id="1ad0260d-93dd-490a-bd19-a67c1a7523ed" name="nocommit" comment="12" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,6 +204,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/JetBrains/Project/git/pfms",
     "node.js.detected.package.eslint": "true",
@@ -406,7 +407,7 @@
       <workItem from="1703767920523" duration="1652000" />
       <workItem from="1704346778496" duration="4909000" />
       <workItem from="1704545380861" duration="1862000" />
-      <workItem from="1704882298603" duration="12118000" />
+      <workItem from="1704882298603" duration="12468000" />
     </task>
     <task id="LOCAL-00001" summary="更换系统logo">
       <created>1548470821316</created>
@@ -521,7 +522,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704897627971</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="第一次提交">
+      <option name="closed" value="true" />
+      <created>1704898139069</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1704898139069</updated>
+    </task>
+    <task id="LOCAL-00018" summary="第一次提交">
+      <option name="closed" value="true" />
+      <created>1704898379839</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1704898379839</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
