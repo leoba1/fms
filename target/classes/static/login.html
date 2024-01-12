@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>FMS-Login</title>
+    <title>登录页面</title>
     <link rel="stylesheet" href="assets/layui/css/layui.css">
     <link rel="stylesheet" href="assets/common.css">
     <link rel="shorcut icon" href="assets/images/logo.png">
@@ -41,7 +41,7 @@
                 <div class="layui-form-item">
                     <div class="layui-input-block">
                         <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
-                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        <button type="button" class="layui-btn layui-btn-primary" onclick="redirectToPage()">注册</button>
                     </div>
                 </div>
             </form>
@@ -51,6 +51,12 @@
 
 <div style="text-align: center;margin: 60px 0 20px 0">
 </div>
+<script>
+    // JavaScript 函数，用于实现跳转网页的功能
+    function redirectToPage() {
+        window.location.href = "register.html";
+    }
+</script>
 <script type="text/javascript" src="assets/layui/layui.js"></script>
 <script type="text/javascript" src="assets/clipboard.min.js"></script>
 <script type="text/javascript" src="assets/config.js"></script>

@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @description 登录切面
- * @author cinco
- * @date 2019-1-21
  */
 @Aspect
 @Component

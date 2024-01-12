@@ -1,6 +1,7 @@
 package cn.org.bai.controller;
 
 import cn.org.bai.annotation.Login;
+import cn.org.bai.common.UserInfoUtil;
 import cn.org.bai.constant.FileTypeEnum;
 import cn.org.bai.entity.User;
 import cn.org.bai.util.CacheUtil;
@@ -15,7 +16,6 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
@@ -47,12 +47,6 @@ public class FileController {
     @Value("${fs.nginxUrl}")
     private String nginxUrl;
 
-    @Value("${admin.uname}")
-    private String uname;
-
-    @Value("${admin.pwd}")
-    private String pwd;
-
     @Value("${domain}")
     private String domain;
 
@@ -64,22 +58,6 @@ public class FileController {
     @RequestMapping("/login")
     public String loginPage() {
         return "login.html";
-    }
-
-    /**
-     * 登录提交认证
-     *
-     * @param user
-     * @param session
-     * @return
-     */
-    @PostMapping("/auth")
-    public String auth(User user, HttpSession session) {
-        if (user.getUname().equals(uname) && user.getPwd().equals(pwd)) {
-            session.setAttribute( "LOGIN_USER", user );
-            return "redirect:/";
-        }
-        return "redirect:/login";
     }
 
     /**
@@ -104,6 +82,9 @@ public class FileController {
     @ResponseBody
     @PostMapping("/file/upload")
     public Map upload(@RequestParam MultipartFile file, @RequestParam String curPos) {
+        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String userFile = fileDir + uid +SLASH;
+
         curPos = curPos.substring(1) + SLASH;
         if (fileDir == null) {
             fileDir = SLASH;
@@ -120,14 +101,14 @@ public class FileController {
         String path;
         if (uuidName != null && uuidName) {
             path = curPos + UUID.randomUUID().toString().replaceAll("-", "") + "." + suffix;
-            outFile = new File(fileDir + path);
+            outFile = new File(userFile + path);
         } else {
             int index = 1;
             path = curPos + originalFileName;
-            outFile = new File(fileDir + path);
+            outFile = new File(userFile + path);
             while (outFile.exists()) {
                 path = curPos + prefix + "(" + index + ")." + suffix;
-                outFile = new File(fileDir + path);
+                outFile = new File(userFile + path);
                 index++;
             }
         }
@@ -147,7 +128,7 @@ public class FileController {
                     e.printStackTrace();
                 }
                 if (contentType != null && contentType.startsWith( "image/" )) {
-                    File smImg = new File(fileDir + "sm/" + path );
+                    File smImg = new File(userFile + "sm/" + path );
                     if (!smImg.getParentFile().exists()) {
                         smImg.getParentFile().mkdirs();
                     }
@@ -194,6 +175,9 @@ public class FileController {
      * @return
      */
     private String getFile(String p, boolean download, HttpServletResponse response) {
+        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String userFile = fileDir + uid +SLASH;
+
         if (useNginx) {
             return useNginx(p);
         }
@@ -203,7 +187,7 @@ public class FileController {
         if (!fileDir.endsWith(SLASH)) {
             fileDir += SLASH;
         }
-        outputFile(fileDir + p, download, response );
+        outputFile(userFile + p, download, response );
         return null;
     }
 
@@ -419,16 +403,19 @@ public class FileController {
     @ResponseBody
     @RequestMapping("/api/list")
     public Map list(String dir, String accept, String exts) {
-        String userFile=fileDir + "sm/";//sm可以换成用户ID
+        User user = UserInfoUtil.GetUserInfo();
+        String uid = user.getUid();
+        String userFile = fileDir + uid +SLASH;
+
         String[] mExts = null;
         if (exts != null && !exts.trim().isEmpty()) {
             mExts = exts.split(",");
         }
-        if (userFile  == null) {
-            userFile = SLASH;
+        if (fileDir  == null) {
+            fileDir = SLASH;
         }
-        if (!userFile.endsWith(SLASH)) {
-            userFile += SLASH;
+        if (!fileDir.endsWith(SLASH)) {
+            fileDir += SLASH;
         }
         Map<String, Object> rs = new HashMap<>();
         if (dir == null || SLASH.equals(dir)) {
@@ -555,6 +542,9 @@ public class FileController {
     @ResponseBody
     @RequestMapping("/api/del")
     public Map del(String file) {
+        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String userFile = fileDir + uid +SLASH;
+
         if (fileDir == null) {
             fileDir = SLASH;
         }
@@ -562,8 +552,8 @@ public class FileController {
             fileDir += SLASH;
         }
         if (file != null && !file.isEmpty()) {
-            File f = new File(fileDir + file );
-            File smF = new File(fileDir + "sm/" + file );
+            File f = new File(userFile + file );
+            File smF = new File(userFile + "sm/" + file );
             if (f.exists()) {
                 // 文件
                 if (f.isFile()) {
@@ -599,6 +589,9 @@ public class FileController {
     @ResponseBody
     @RequestMapping("/api/rename")
     public Map rename(String oldFile, String newFile) {
+        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String userFile = fileDir + uid +SLASH;
+
         if (fileDir == null) {
             fileDir = SLASH;
         }
@@ -606,10 +599,10 @@ public class FileController {
             fileDir += SLASH;
         }
         if (!StringUtils.isEmpty(oldFile) && !StringUtils.isEmpty(newFile)) {
-            File f = new File(fileDir + oldFile );
-            File smF = new File(fileDir + "sm/" + oldFile );
-            File nFile = new File(fileDir + newFile );
-            File nsmFile = new File(fileDir + "sm/" + newFile );
+            File f = new File(userFile + oldFile );
+            File smF = new File(userFile + "sm/" + oldFile );
+            File nFile = new File(userFile + newFile );
+            File nsmFile = new File(userFile + "sm/" + newFile );
             if (f.renameTo(nFile)) {
                 if (smF.exists()) {
                     smF.renameTo(nsmFile);
@@ -668,6 +661,10 @@ public class FileController {
     @ResponseBody
     @RequestMapping("/api/mkdir")
     public Map mkdir(String curPos, String dirName) {
+        User user = UserInfoUtil.GetUserInfo();
+        String uid = user.getUid();
+        String userFile = fileDir + uid +SLASH;
+
         if (fileDir == null) {
             fileDir = SLASH;
         }
@@ -676,8 +673,9 @@ public class FileController {
         }
         if (!StringUtils.isEmpty(curPos) && !StringUtils.isEmpty(dirName)) {
             curPos = curPos.substring(1);
-            String dirPath = fileDir + curPos + SLASH + dirName;
-            File f = new File(dirPath);
+            String dirPath = userFile + curPos + SLASH + dirName;
+            String replacedPath = dirPath.replace("//", "/");
+            File f = new File(replacedPath);
             if (f.exists()) {
                 return getRS( 500, "目录已存在" );
             }
@@ -740,6 +738,9 @@ public class FileController {
      */
     @GetMapping("/share")
     public String sharePage(@RequestParam(value = "sid", required = true) String sid, ModelMap modelMap) {
+        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String userFile = fileDir + uid +SLASH;
+
         if (!CacheUtil.dataMap.isEmpty()) {
             if (CacheUtil.dataMap.containsKey(sid)) {
                 // 是否在有效期内
@@ -768,7 +769,7 @@ public class FileController {
                     modelMap.put( "fileName", url.substring(url.lastIndexOf('/') + 1) );
                     // 是否有缩略图
                     String smUrl = "sm/" + url;
-                    if (new File(fileDir + smUrl ).exists()) {
+                    if (new File(userFile + smUrl ).exists()) {
                         modelMap.put( "hasSm", true );
                         // 缩略图地址
                         modelMap.put( "smUrl", "share/file/sm?sid=" + sid );

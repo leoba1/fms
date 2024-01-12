@@ -98,6 +98,13 @@
         var laytpl = layui.laytpl;
         var util = layui.util;
 
+        // 在页面加载完成后执行的方法
+        function onPageLoad() {
+            console.log("页面加载完成！");
+            renderList()
+        }
+        window.onload = onPageLoad;
+
         // 渲染文件列表
         function renderList(dir) {
             if ($('#tvFP').text() == '/') {

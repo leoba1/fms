@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2ec63f7-b596-476d-b01b-821179b69ac7" name="Default Changelist" comment="第一次提交">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/common/UserInfoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/UI/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/FmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/FmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/annotation/LoginAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/annotation/LoginAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/FmsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/FmsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/annotation/LoginAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/annotation/LoginAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/register.html" afterDir="false" />
     </list>
     <list id="1ad0260d-93dd-490a-bd19-a67c1a7523ed" name="nocommit" comment="12" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +41,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="mybatis-mapper" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -195,31 +216,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/JetBrains/Project/git/pfms",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "3b7d026482c3baf3d24bab884e1ebe46",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JetBrains/Project/git/pfms&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3b7d026482c3baf3d24bab884e1ebe46&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\code\fms\src\main\resources" />
@@ -228,11 +249,11 @@
       <recent name="F:\code\fms\src\main\resources\static\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JetBrains\Project\git\pfms\src\main\resources\static\assets\images" />
+      <recent name="D:\JetBrains\Project\git\pfms\target\files\1745086481843351553" />
       <recent name="D:\JetBrains\Project\git\pfms\src\main\resources\static\assets\UI" />
+      <recent name="D:\JetBrains\Project\git\pfms\src\main\resources\static\assets\images" />
       <recent name="D:\JetBrains\Project\git\pfms\src\main\resources\static\assets\axios" />
       <recent name="D:\JetBrains\Project\git\pfms\src\main\resources\static\assets\vue" />
-      <recent name="D:\JetBrains\Project\git\pfms\target\files\sm" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.org.xinke.constant" />
@@ -407,7 +428,8 @@
       <workItem from="1703767920523" duration="1652000" />
       <workItem from="1704346778496" duration="4909000" />
       <workItem from="1704545380861" duration="1862000" />
-      <workItem from="1704882298603" duration="12468000" />
+      <workItem from="1704882298603" duration="12779000" />
+      <workItem from="1705066105076" duration="8671000" />
     </task>
     <task id="LOCAL-00001" summary="更换系统logo">
       <created>1548470821316</created>
@@ -538,7 +560,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704898379839</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="第一次提交">
+      <option name="closed" value="true" />
+      <created>1704898551438</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1704898551438</updated>
+    </task>
+    <task id="LOCAL-00020" summary="第一次提交">
+      <option name="closed" value="true" />
+      <created>1704898609498</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1704898609498</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -617,6 +655,17 @@
     <MESSAGE value="README文件修改。" />
     <MESSAGE value="第一次提交" />
     <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/annotation/LoginAspect.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wf/easyfs/EasyFsApplication.java" />

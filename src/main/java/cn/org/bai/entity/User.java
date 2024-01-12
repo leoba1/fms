@@ -1,10 +1,14 @@
 package cn.org.bai.entity;
 
+import lombok.Data;
+
 /**
  * @author bzh
  */
+@Data
 public class User {
 
+    private String uid;
     /**
      * 账户
      */
@@ -15,26 +19,4 @@ public class User {
      */
     private String pwd;
 
-
-
-    public User(String uname, String pwd) {
-        this.uname = uname;
-        this.pwd = pwd;
-    }
-
-    public String getUname() {
-        return uname;
-    }
-
-    public void setUname(String uname) {
-        this.uname = uname;
-    }
-
-    public String getPwd() {
-        return pwd;
-    }
-
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
 }

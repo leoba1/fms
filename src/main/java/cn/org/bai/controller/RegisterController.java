@@ -1,15 +1,20 @@
 package cn.org.bai.controller;
 
 import cn.org.bai.common.Result;
+import cn.org.bai.common.UserInfoUtil;
+import cn.org.bai.entity.User;
 import cn.org.bai.entity.dto.RegiserDto;
 import cn.org.bai.service.RegisterService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.io.File;
 
 /**
  * @author bzh
@@ -36,7 +41,7 @@ public class RegisterController {
             return Result.error("0","用户名已注册");
         }
 
-        registerService.save(regiserDto);
+        boolean saved = registerService.save(regiserDto);
         return Result.success();
     }
 }
