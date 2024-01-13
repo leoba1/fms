@@ -174,6 +174,22 @@ public class FileController {
      * @param response
      * @return
      */
+    private String getFile(String p, boolean download, HttpServletResponse response,String uid) {
+
+        String userFile = fileDir + uid +SLASH;
+
+        if (useNginx) {
+            return useNginx(p);
+        }
+        if (fileDir == null) {
+            fileDir = SLASH;
+        }
+        if (!fileDir.endsWith(SLASH)) {
+            fileDir += SLASH;
+        }
+        outputFile(userFile + p, download, response );
+        return null;
+    }
     private String getFile(String p, boolean download, HttpServletResponse response) {
         String uid = UserInfoUtil.GetUserInfo().getUid();
         String userFile = fileDir + uid +SLASH;
@@ -216,7 +232,10 @@ public class FileController {
      * @param response
      * @return
      */
-    private String returnShareFileOrSm(String sid, boolean download, ModelMap modelMap, HttpServletResponse response) {
+    private String returnShareFileOrSm(String sid, boolean download, ModelMap modelMap, HttpServletResponse response,String uid) {
+
+        String userFile = fileDir + uid +SLASH;
+
         String url = null;
         if (!CacheUtil.dataMap.isEmpty()) {
             if (CacheUtil.dataMap.containsKey(sid)) {
@@ -225,7 +244,7 @@ public class FileController {
                 if (expireDate != null && expireDate.compareTo(new Date()) > 0) {
                     url = (String) CacheUtil.get(sid);
                     // 文件是否存在
-                    File existFile = new File(fileDir + url );
+                    File existFile = new File( userFile+ url );
                     if (!existFile.exists()) {
                         modelMap.put( "msg", "该文件已不存在~" );
                         return "error.html";
@@ -239,7 +258,7 @@ public class FileController {
                 return "error.html";
             }
         }
-        return getFile( url, download, response );
+        return getFile( url, download, response,uid );
     }
 
     /**
@@ -252,9 +271,10 @@ public class FileController {
     @GetMapping("/share/file")
     public String shareFile(@RequestParam(value = "sid", required = true) String sid,
                             @RequestParam(value = "d", required = true) int d,
+                            @RequestParam(value = "uid", required = true) String uid,
                             HttpServletResponse response,
                             ModelMap modelMap) {
-        return returnShareFileOrSm( sid, d == 1 ? true : false, modelMap, response );
+        return returnShareFileOrSm( sid, d == 1 ? true : false, modelMap, response,uid );
     }
 
     /**
@@ -266,9 +286,10 @@ public class FileController {
      */
     @GetMapping("/share/file/sm")
     public String shareFileSm(@RequestParam(value = "sid", required = true) String sid,
+                              @RequestParam(value = "uid", required = true) String uid,
                               HttpServletResponse response,
                               ModelMap modelMap) {
-        return returnShareFileOrSm( sid, false, modelMap, response );
+        return returnShareFileOrSm( sid, false, modelMap, response,uid );
     }
 
     /**
@@ -405,6 +426,7 @@ public class FileController {
     public Map list(String dir, String accept, String exts) {
         User user = UserInfoUtil.GetUserInfo();
         String uid = user.getUid();
+
         String userFile = fileDir + uid +SLASH;
 
         String[] mExts = null;
@@ -697,6 +719,8 @@ public class FileController {
     @ResponseBody
     @PostMapping("/api/share")
     public Map share(String file, int time) {
+        String uid = UserInfoUtil.GetUserInfo().getUid();
+
         // 若文件已经分享
         if (!CacheUtil.dataMap.isEmpty()) {
             if (CacheUtil.dataMap.containsValue(file)) {
@@ -726,7 +750,7 @@ public class FileController {
         }
         String sid = UUID.randomUUID().toString();
         CacheUtil.put( sid, file, time );
-        return getRS(200, "分享成功", domain + SLASH + "share?sid=" + sid );
+        return getRS(200, "分享成功", domain + SLASH + "share?sid=" + sid + "&" + "uid=" + uid );
     }
 
     /**
@@ -737,8 +761,8 @@ public class FileController {
      * @return
      */
     @GetMapping("/share")
-    public String sharePage(@RequestParam(value = "sid", required = true) String sid, ModelMap modelMap) {
-        String uid = UserInfoUtil.GetUserInfo().getUid();
+    public String sharePage(@RequestParam(value = "sid", required = true) String sid,@RequestParam(value = "uid", required = true) String uid, ModelMap modelMap) {
+
         String userFile = fileDir + uid +SLASH;
 
         if (!CacheUtil.dataMap.isEmpty()) {
@@ -748,7 +772,7 @@ public class FileController {
                 if (expireDate != null && expireDate.compareTo(new Date()) > 0) {
                     String url = (String) CacheUtil.get(sid);
                     // 文件是否存在
-                    File existFile = new File(fileDir + url );
+                    File existFile = new File(userFile + url );
                     if (!existFile.exists()) {
                         modelMap.put( "exists", false );
                         modelMap.put( "msg", "该文件已不存在~" );
