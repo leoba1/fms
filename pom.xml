@@ -37,11 +37,11 @@
             <optional>true</optional>
         </dependency>
         <!--接口文档依赖-->
-        <dependency>
-            <groupId>com.github.wgbvirtuals</groupId>
-            <artifactId>vip-swagger</artifactId>
-            <version>1.0.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.github.wgbvirtuals</groupId>-->
+<!--            <artifactId>vip-swagger</artifactId>-->
+<!--            <version>1.0.1</version>-->
+<!--        </dependency>-->
         <!--druid 依赖-->
 <!--        <dependency>-->
 <!--            <groupId>com.alibaba</groupId>-->

@@ -121,6 +121,7 @@
             $.get(baseServer + 'api/list', {
                 dir: dir
             }, function (res) {
+                console.log(res)
                 layer.closeAll('loading');
                 if (res.code == 200) {
                     for (var i = 0; i < res.data.length; i++) {
@@ -130,7 +131,11 @@
                     laytpl(fileTpl.innerHTML).render(res.data, function (html) {
                         $('.file-list').html(html);
                     });
-                } else {
+                }else if (res.code == 124){
+                    window.location.href = "login.html";
+                }
+                else {
+                    window.location.href = "login.html"
                     layer.msg(res.msg, {icon: 2});
                 }
             });

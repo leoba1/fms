@@ -5,18 +5,25 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * @description 登录切面
  */
 @Aspect
 @Component
+@Order(1)
 public class LoginAspect {
+
+    @Value("${domain}")
+    private String domain;
 
     @Pointcut("execution(public * cn.org.bai.controller.*.*(..)) && @annotation(cn.org.bai.annotation.Login)")
     public void pointcut(){}
@@ -29,7 +36,12 @@ public class LoginAspect {
         // 登录认证
         User loginUser = (User) request.getSession().getAttribute( "LOGIN_USER" );
         if (loginUser == null) {
-            response.sendRedirect( "/login.html" );
+            try {
+                response.sendRedirect( "/login.html" );
+//                response.sendRedirect(request.getContextPath() + "/login");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         try {
             return pjp.proceed();

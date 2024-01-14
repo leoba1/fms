@@ -56,9 +56,9 @@ public class LoginController {
                 }
 
                 session.setAttribute( "LOGIN_USER", user );
-                return "redirect:/";
+                return "redirect:/index.html";
             }
         }
-        return "redirect:/login";
+        return "redirect:/login.html";
     }
 }

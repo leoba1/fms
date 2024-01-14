@@ -14,6 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -58,6 +60,12 @@ public class FileController {
     @RequestMapping("/login")
     public String loginPage() {
         return "login.html";
+    }
+
+    @Login
+    @RequestMapping("/index")
+    public String indexPage() {
+        return "index.html";
     }
 
     /**
@@ -423,8 +431,13 @@ public class FileController {
     @Login
     @ResponseBody
     @RequestMapping("/api/list")
-    public Map list(String dir, String accept, String exts) {
+    public Map list(String dir, String accept, String exts) throws IOException {
         User user = UserInfoUtil.GetUserInfo();
+        if (user == null){
+            HashMap<Object, Object> err = new HashMap<>();
+            err.put("code",124);
+            return err;
+        }
         String uid = user.getUid();
 
         String userFile = fileDir + uid +SLASH;
