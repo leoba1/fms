@@ -1,4 +1,4 @@
-package cn.org.bai.util;
+package cn.org.bai.utils;
 
 import java.util.Date;
 import java.util.Map;

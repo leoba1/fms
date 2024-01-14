@@ -1,4 +1,4 @@
-package cn.org.bai.util;
+package cn.org.bai.utils;
 
 import cn.org.bai.constant.ContentTypeEnum;
 import org.springframework.util.StringUtils;

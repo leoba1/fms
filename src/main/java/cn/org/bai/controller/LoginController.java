@@ -1,8 +1,7 @@
 package cn.org.bai.controller;
 
-import cn.org.bai.common.UserInfoUtil;
-import cn.org.bai.entity.User;
-import cn.org.bai.entity.dto.RegiserDto;
+import cn.org.bai.model.entity.User;
+import cn.org.bai.model.dto.RegiserDto;
 import cn.org.bai.service.RegisterService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;

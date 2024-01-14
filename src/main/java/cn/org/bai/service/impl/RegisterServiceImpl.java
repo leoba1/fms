@@ -1,6 +1,6 @@
 package cn.org.bai.service.impl;
 
-import cn.org.bai.entity.dto.RegiserDto;
+import cn.org.bai.model.dto.RegiserDto;
 import cn.org.bai.mapper.RegisterMapper;
 import cn.org.bai.service.RegisterService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

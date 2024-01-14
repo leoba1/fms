@@ -1,6 +1,6 @@
 package cn.org.bai.mapper;
 
-import cn.org.bai.entity.dto.RegiserDto;
+import cn.org.bai.model.dto.RegiserDto;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

@@ -1,6 +1,6 @@
 package cn.org.bai.schedule;
 
-import cn.org.bai.util.CacheUtil;
+import cn.org.bai.utils.CacheUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.springframework.context.annotation.Configuration;

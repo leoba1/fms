@@ -1,6 +1,6 @@
 package cn.org.bai.common;
 
-import cn.org.bai.entity.User;
+import cn.org.bai.model.entity.User;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 

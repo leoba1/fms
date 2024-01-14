@@ -293,6 +293,7 @@
                     file: file,
                     time: value
                 }, function (res) {
+                    console.log(res)
                     layer.closeAll('loading');
                     if (res.code == 200) {
                         layer.open({

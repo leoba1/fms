@@ -1,4 +1,4 @@
-package cn.org.bai.entity;
+package cn.org.bai.model.entity;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package cn.org.bai.annotation;
 
-import cn.org.bai.entity.User;
+import cn.org.bai.model.entity.User;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

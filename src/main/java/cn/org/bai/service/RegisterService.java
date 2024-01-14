@@ -1,6 +1,6 @@
 package cn.org.bai.service;
 
-import cn.org.bai.entity.dto.RegiserDto;
+import cn.org.bai.model.dto.RegiserDto;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

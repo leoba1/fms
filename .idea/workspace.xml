@@ -4,17 +4,66 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2ec63f7-b596-476d-b01b-821179b69ac7" name="Default Changelist" comment="完成文件操作基本功能">
+    <list default="true" id="c2ec63f7-b596-476d-b01b-821179b69ac7" name="Default Changelist" comment="修复分享功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/FilePathConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/FilePathProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/MyBatisPlusMetaHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/MyCodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/SystemException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/constant/DBConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/constant/SysConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/constant/UrlConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/mapper/FilesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/dto/AddFileDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/dto/GetFileDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/entity/Files.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/response/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/response/RestResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/response/RestResponses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/response/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/response/Results.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/service/IFileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/utils/EmptyUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/utils/EncodingUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/utils/InputStreamUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/utils/NovelWebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/utils/UuidUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bigFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/annotation/LoginAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/annotation/LoginAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/common/UserInfoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/common/UserInfoUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/share.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/entity/dto/RegiserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/dto/RegiserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/mapper/RegisterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/mapper/RegisterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/schedule/ScheduleConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/schedule/ScheduleConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/service/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/util/CacheUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/utils/CacheUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/util/FileTypeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/utils/FileTypeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/annotation/LoginAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/annotation/LoginAspect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/entity/dto/RegiserDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/mapper/RegisterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/mapper/RegisterMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/schedule/ScheduleConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/schedule/ScheduleConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/service/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/service/impl/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/service/impl/RegisterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/util/CacheUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/util/FileTypeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/share.html" afterDir="false" />
     </list>
     <list id="1ad0260d-93dd-490a-bd19-a67c1a7523ed" name="nocommit" comment="12" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +77,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="mybatis-mapper" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -215,7 +264,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JetBrains/Project/git/pfms&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JetBrains/Project/git/pfms/src/main/java/cn/org/bai/util&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -224,17 +273,18 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;3b7d026482c3baf3d24bab884e1ebe46&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\code\fms\src\main\resources" />
-      <recent name="F:\code\fms\src\main\resources\static" />
-      <recent name="F:\code\fms\src\main\resources\static\assets" />
-      <recent name="F:\code\fms\src\main\resources\static\assets\images" />
+      <recent name="D:\JetBrains\Project\git\pfms\src\main\java\cn\org\bai\util" />
+      <recent name="D:\JetBrains\Project\git\pfms\src\main\java\cn\org\bai\entity" />
+      <recent name="D:\JetBrains\Project\git\pfms\src\main\java\cn\org\bai\entity\dto" />
+      <recent name="D:\JetBrains\Project\git\pfms\src\main\java\cn\org\bai\constant" />
+      <recent name="D:\JetBrains\Project\git\pfms\src\main\java\cn\org\bai\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JetBrains\Project\git\pfms\target\files\1745086481843351553" />
@@ -244,6 +294,9 @@
       <recent name="D:\JetBrains\Project\git\pfms\src\main\resources\static\assets\vue" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.org.bai.service" />
+      <recent name="cn.org.bai.service.impl" />
+      <recent name="cn.org.bai.mapper" />
       <recent name="cn.org.xinke.constant" />
     </key>
   </component>
@@ -418,7 +471,9 @@
       <workItem from="1704545380861" duration="1862000" />
       <workItem from="1704882298603" duration="12779000" />
       <workItem from="1705066105076" duration="9052000" />
-      <workItem from="1705154527419" duration="4519000" />
+      <workItem from="1705154527419" duration="5416000" />
+      <workItem from="1705202559034" duration="5612000" />
+      <workItem from="1705215316979" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="更换系统logo">
       <created>1548470821316</created>
@@ -573,7 +628,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705075006755</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="修复分享功能">
+      <option name="closed" value="true" />
+      <created>1705159165205</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1705159165205</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -632,6 +695,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
@@ -652,7 +716,8 @@
     <MESSAGE value="README文件修改。" />
     <MESSAGE value="第一次提交" />
     <MESSAGE value="完成文件操作基本功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成文件操作基本功能" />
+    <MESSAGE value="修复分享功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复分享功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
