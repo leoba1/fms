@@ -90,7 +90,7 @@ public class FileController {
     @ResponseBody
     @PostMapping("/file/upload")
     public Map upload(@RequestParam MultipartFile file, @RequestParam String curPos) {
-        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         String userFile = fileDir + uid +SLASH;
 
         curPos = curPos.substring(1) + SLASH;
@@ -199,7 +199,7 @@ public class FileController {
         return null;
     }
     private String getFile(String p, boolean download, HttpServletResponse response) {
-        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         String userFile = fileDir + uid +SLASH;
 
         if (useNginx) {
@@ -577,7 +577,7 @@ public class FileController {
     @ResponseBody
     @RequestMapping("/api/del")
     public Map del(String file) {
-        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         String userFile = fileDir + uid +SLASH;
 
         if (fileDir == null) {
@@ -624,7 +624,7 @@ public class FileController {
     @ResponseBody
     @RequestMapping("/api/rename")
     public Map rename(String oldFile, String newFile) {
-        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         String userFile = fileDir + uid +SLASH;
 
         if (fileDir == null) {
@@ -696,8 +696,7 @@ public class FileController {
     @ResponseBody
     @RequestMapping("/api/mkdir")
     public Map mkdir(String curPos, String dirName) {
-        User user = UserInfoUtil.GetUserInfo();
-        String uid = user.getUid();
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         String userFile = fileDir + uid +SLASH;
 
         if (fileDir == null) {
@@ -732,7 +731,7 @@ public class FileController {
     @ResponseBody
     @PostMapping("/api/share")
     public Map share(String file, int time) {
-        String uid = UserInfoUtil.GetUserInfo().getUid();
+        String uid = UserInfoUtil.GetUserInfoByCookie();
 
         // 若文件已经分享
         if (!CacheUtil.dataMap.isEmpty()) {

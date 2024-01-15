@@ -1,6 +1,7 @@
 package cn.org.bai.controller;
 
 import cn.novelweb.tool.upload.local.pojo.UploadFileParam;
+import cn.org.bai.annotation.Login;
 import cn.org.bai.config.SystemException;
 import cn.org.bai.constant.SysConstant;
 import cn.org.bai.constant.UrlConstant;
@@ -60,6 +61,7 @@ public class BigFileController {
      * @param file 文件
      * @return {@link RestResponse}<{@link String}>
      */
+    @Login
     @PostMapping("/upload")
     public RestResponse<String> uploadFiles(MultipartFile file) {
         if (file.isEmpty()) {
@@ -102,6 +104,7 @@ public class BigFileController {
      * @param request 请求
      * @return {@link RestResponse}<{@link Object}>
      */
+    @Login
     @PostMapping(value = "/breakpoint-upload", consumes = "multipart/*", headers = "content-type=multipart/form-data", produces = "application/json;charset=UTF-8")
     public RestResponse<Object> breakpointResumeUpload(UploadFileParam param, HttpServletRequest request) {
         return RestResponses.newResponseFromResult(fileService.breakpointResumeUpload(param, request));

@@ -36,7 +36,11 @@ public class RegisterController {
             return Result.error("0","用户名已注册");
         }
 
+        regiserDto.setRole("user");
         boolean saved = registerService.save(regiserDto);
-        return Result.success();
+        if (saved){
+            return Result.success();
+        }
+        return Result.error("0","错误");
     }
 }

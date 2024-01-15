@@ -26,4 +26,9 @@ public class RegiserDto {
      * 邮箱
      */
     private String email;
+
+    /**
+     * 角色
+     */
+    private String role;
 }

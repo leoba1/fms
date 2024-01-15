@@ -45,9 +45,9 @@ $(function () {
     /**
      * 更新头部时间
      */
-    $(function () {
-        $("#curr-date").html(initDate(new Date()));
-    });
+    // $(function () {
+    //     $("#curr-date").html(initDate(new Date()));
+    // });
     /**
      * 鼠标移入文件事件
      */

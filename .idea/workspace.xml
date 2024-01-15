@@ -4,57 +4,27 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2ec63f7-b596-476d-b01b-821179b69ac7" name="Default Changelist" comment="修复分享功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/BigFileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/FilesMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/EJB9eWQqYx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/dts.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/apk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/excel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/exe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/html.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/iso.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/music.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/mv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/other.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/pdf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/ppt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/psd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/sql.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/txt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/word.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/file-type/zip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/上.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/下.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/img/添加.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/js/constant/SysConstent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/js/constant/urls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/js/page/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/js/utils/TimeUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/js/utils/line-background.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/lib/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/lib/uploader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/lib/web-uploader.min-0.1.6.js" afterDir="false" />
+    <list default="true" id="c2ec63f7-b596-476d-b01b-821179b69ac7" name="Default Changelist" comment="修bug">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/security/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/FmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/FmsApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/annotation/LoginAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/annotation/LoginAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/common/UserInfoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/common/UserInfoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/BigFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/BigFileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/FileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RegisterMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/dto/RegiserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/dto/RegiserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/js/page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/js/page/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/bigFile/js/utils/line-background.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/bigFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bigFile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/FmsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/FmsApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/annotation/LoginAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/annotation/LoginAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/FileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/org/bai/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/Register.xml" beforeDir="false" />
     </list>
     <list id="1ad0260d-93dd-490a-bd19-a67c1a7523ed" name="nocommit" comment="12" />
     <option name="SHOW_DIALOG" value="false" />
@@ -466,7 +436,11 @@
       <workItem from="1705202559034" duration="5612000" />
       <workItem from="1705215316979" duration="302000" />
       <workItem from="1705215934904" duration="4433000" />
-      <workItem from="1705239385916" duration="5818000" />
+      <workItem from="1705239385916" duration="6117000" />
+      <workItem from="1705288317953" duration="1418000" />
+      <workItem from="1705307576747" duration="3571000" />
+      <workItem from="1705324159078" duration="7828000" />
+      <workItem from="1705332312661" duration="1531000" />
     </task>
     <task id="LOCAL-00001" summary="更换系统logo">
       <created>1548470821316</created>
@@ -629,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705159165205</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="修bug">
+      <option name="closed" value="true" />
+      <created>1705245408178</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1705245408178</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -710,25 +692,61 @@
     <MESSAGE value="第一次提交" />
     <MESSAGE value="完成文件操作基本功能" />
     <MESSAGE value="修复分享功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复分享功能" />
+    <MESSAGE value="修bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/common/UserInfoUtil.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/controller/LoginController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/controller/BigFileController.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java</url>
+          <line>133</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/service/impl/FileServiceImpl.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/common/UserInfoUtil.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cn/org/bai/controller/LoginController.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="17" />
+          <line>48</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

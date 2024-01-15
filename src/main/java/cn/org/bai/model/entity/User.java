@@ -18,5 +18,6 @@ public class User {
      * 密码
      */
     private String pwd;
+    private String role;
 
 }

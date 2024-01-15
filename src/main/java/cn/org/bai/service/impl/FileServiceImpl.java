@@ -2,6 +2,8 @@ package cn.org.bai.service.impl;
 
 import cn.novelweb.tool.upload.local.LocalUpload;
 import cn.novelweb.tool.upload.local.pojo.UploadFileParam;
+import cn.org.bai.common.UserInfoUtil;
+import cn.org.bai.model.entity.User;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import cn.org.bai.constant.SysConstant;
@@ -58,6 +60,7 @@ public class FileServiceImpl implements IFileService {
 
     @Override
     public Result<String> uploadFiles(MultipartFile file) {
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         try {
             String fileName = file.getOriginalFilename();
             // 文件名非空校验
@@ -72,7 +75,7 @@ public class FileServiceImpl implements IFileService {
             String suffixName = fileName.contains(".") ? fileName.substring(fileName.lastIndexOf(".")) : null;
             String newName = UuidUtils.uuid() + suffixName;
             // 重命名文件
-            File newFile = new File(savePath, newName);
+            File newFile = new File(savePath + uid, newName);
             // 如果该存储路径不存在则新建存储路径
             if (!newFile.getParentFile().exists()) {
                 newFile.getParentFile().mkdirs();
@@ -91,8 +94,9 @@ public class FileServiceImpl implements IFileService {
 
     @Override
     public Result<Object> checkFileMd5(String md5, String fileName) {
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         try {
-            cn.novelweb.tool.http.Result result = LocalUpload.checkFileMd5(md5, fileName, confFilePath, savePath);
+            cn.novelweb.tool.http.Result result = LocalUpload.checkFileMd5(md5, fileName, confFilePath, savePath + uid);
             return NovelWebUtils.forReturn(result);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
@@ -102,9 +106,11 @@ public class FileServiceImpl implements IFileService {
 
     @Override
     public Result breakpointResumeUpload(UploadFileParam param, HttpServletRequest request) {
+
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         try {
             // 这里的 chunkSize(分片大小) 要与前端传过来的大小一致
-            cn.novelweb.tool.http.Result result = LocalUpload.fragmentFileUploader(param, confFilePath, savePath, 5242880L, request);
+            cn.novelweb.tool.http.Result result = LocalUpload.fragmentFileUploader(param, confFilePath, savePath + uid, 5242880L, request);
             return NovelWebUtils.forReturn(result);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
@@ -125,9 +131,10 @@ public class FileServiceImpl implements IFileService {
 
     @Override
     public InputStream getFileInputStream(String id) {
+        String uid = UserInfoUtil.GetUserInfoByCookie();
         try {
             Files files = filesMapper.selectById(id);
-            File file = new File(savePath + File.separator + files.getFilePath());
+            File file = new File(savePath + uid + File.separator + files.getFilePath());
             return new FileInputStream(file);
         } catch (Exception e) {
             log.error("获取文件输入流出错", e);

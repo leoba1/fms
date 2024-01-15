@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>批量文件断点续传</title>
-    <link rel="shortcut icon" href="./assets/bigFile/img/dts.ico" type="image/x-icon">
+    <title>大文件上传控制台</title>
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/bigFile/css/index.css" />
     <script type="text/javascript" src="./assets/bigFile/lib/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./assets/bigFile/js/utils/TimeUtils.js"></script>
@@ -12,15 +12,32 @@
     <script type="text/javascript" src="./assets/bigFile/lib/web-uploader.min-0.1.6.js"></script>
     <script type="text/javascript" src="./assets/bigFile/lib/uploader.js"></script>
     <script type="text/javascript" src="./assets/bigFile/js/page/index.js"></script>
+    <link rel="stylesheet" href="assets/common.css">
+    <link rel="stylesheet" href="assets/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/common.css">
+    <link rel="shorcut icon" href="assets/images/logo.png">
 </head>
 <body>
+<div class="header">
+    <div class="layui-container">
+        <div class="layui-logo">
+            <img src="assets/images/logo.png"/><cite><span><a href="/">File Transfer System</a></span></cite>
+        </div>
+    </div>
+</div>
+<div class="layui-card">
+<div class="btnDiv">
+    <button id="btnBack" class="layui-btn layui-btn-sm layui-btn-primary icon-btn"><i class="layui-icon">&#xe65c;</i>返回
+    </button>
+    <button id="btnRefresh" class="layui-btn layui-btn-sm layui-btn-primary icon-btn"><i class="layui-icon">&#xe669;</i>刷新
+    </button>
+    <button id="btnUpload" class="layui-btn layui-btn-sm layui-btn-normal icon-btn"><i class="layui-icon">&#xe681;</i>上传文件
+    </button>
+</div>
 <div class="main">
     <div class="top">
-        <p class="t-title"><i>文件断点续传控制台</i></p>
+        <p class="t-title"><i>大文件上传控制台</i></p>
         <a class="t-right" href="javascript:;" onclick="refresh()">刷新</a>
-    </div>
-    <div class="sync-time">
-        文件同步时间：<span id="curr-date"></span>
     </div>
     <div class="file-list" id="fileList">
         <ul>
@@ -35,6 +52,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="./assets/bigFile/js/utils/line-background.js"></script>
+</div>
 </body>
+<script type="text/javascript" src="assets/layui/layui.js"></script>
 </html>
